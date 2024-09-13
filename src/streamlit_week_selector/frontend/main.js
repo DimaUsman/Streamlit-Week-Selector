@@ -42,4 +42,4 @@ Streamlit.events.addEventListener(Streamlit.RENDER_EVENT, onRender)
 // Tell Streamlit that the component is ready to receive events
 Streamlit.setComponentReady()
 // Render with the correct height, if this is a fixed-height component
-Streamlit.setFrameHeight(400)
+Streamlit.setFrameHeight(100)
