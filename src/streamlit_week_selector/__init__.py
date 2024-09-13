@@ -45,7 +45,11 @@ def streamlit_week_selector(
 
 def main():
     st.write("## Example")
-    value = st_keyup("This is a label!", '2024-W35')
+    col = st.columns(2)
+    with col[0]:
+        value = st_keyup("Choose date", '2024-W35')
+    with col[1]:
+        st.text_input('Choose date')
     st.write(value)
     #value = streamlit_week_selector()
 
