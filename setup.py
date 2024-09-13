@@ -7,7 +7,7 @@ long_description = (this_directory / "README.md").read_text()
 
 setuptools.setup(
     name="streamlit-week-selector",
-    version="0.1.0",
+    version="0.1.1",
     author="Dmitry Usman",
     author_email="dimausman@inbox.ru",
     description="this component offers you to input and choose single week from year",
