@@ -16,7 +16,7 @@ function onRender(event) {
   // Only run the render code the first time the component is loaded.
   if (!window.rendered) {
     // Grab the label and default value that the user specified
-    const {label, value} = event.detail.args;
+    const {label, value, labelCollapse} = event.detail.args;
 
     // Set the label text to be what the user specified
     const label_el = document.getElementById("label")
@@ -27,7 +27,9 @@ function onRender(event) {
     if (value) {
       input.value = value
     }
-
+    if (labelCollapse) {
+      label_el.style.display = "none"
+    }
     // On the keyup event, send the new value to Python
     input.onkeyup = event => sendValue(event.target.value)
 

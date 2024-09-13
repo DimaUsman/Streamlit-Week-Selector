@@ -16,6 +16,7 @@ def st_keyup(
     label: str,
     value: Optional[str] = "",
     key: Optional[str] = None,
+    labelCollapse:bool = False
 ):
     """
     Create a Streamlit text input that returns the value whenever a key is pressed.
@@ -24,7 +25,8 @@ def st_keyup(
         label=label,
         value=value,
         key=key,
-        default=value
+        default=value,
+        labelCollapse=labelCollapse
     )
 
     return component_value
@@ -47,7 +49,7 @@ def main():
     st.write("## Example")
     col = st.columns(2)
     with col[0]:
-        value = st_keyup("Choose date", '2024-W35')
+        value = st_keyup("Choose date", '2024-W35', labelCollapse=False)
     with col[1]:
         st.text_input('Choose date')
     st.write(value)
